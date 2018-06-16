@@ -5,7 +5,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using swlunch.mvc.Models;
-using swlunch.data;
 
 namespace swlunch.mvc.Controllers
 {
@@ -17,11 +16,8 @@ namespace swlunch.mvc.Controllers
         }
 
         public IActionResult About()
-        {
-            Class1 cls1 = new Class1();
-            
-            ViewData["Message"] = cls1.testMethod();
-            //"Your application description page.";
+        {            
+            ViewData["Message"] = "Your application description page.";
 
             return View();
         }
