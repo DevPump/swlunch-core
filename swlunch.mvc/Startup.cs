@@ -12,6 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using swlunch.data;
 using swlunch.service;
+using swlunch.data.context;
 
 namespace swlunch.mvc
 {

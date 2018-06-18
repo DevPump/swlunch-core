@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace swlunch.data
+namespace swlunch.data.models
 {
     public partial class Lunchchoices
     {

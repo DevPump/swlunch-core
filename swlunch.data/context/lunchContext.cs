@@ -1,8 +1,9 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
+using swlunch.data.models;
 
-namespace swlunch.data
+namespace swlunch.data.context
 {
     public partial class lunchContext : DbContext
     {

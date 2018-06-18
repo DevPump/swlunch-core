@@ -1,4 +1,7 @@
 using System;
+using swlunch.data.context;
+using swlunch.data.models;
+
 
 namespace swlunch.data{    
     public class LunchRepository {
