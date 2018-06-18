@@ -12,14 +12,13 @@ namespace swlunch.mvc.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly lunchContext _context;
-        public HomeController(lunchContext context){
-            _context = context;
+        private readonly LunchService _service;
+        public HomeController(LunchService service){
+            _service = service;
         }
         public IActionResult Index()
         {
-            LunchService cls = new LunchService(_context);
-            Restaurants variable =  cls.testClass();
+            Restaurants variable = _service.testClass();
             return View();
         }
 

@@ -9,9 +9,6 @@ namespace swlunch.service
         public LunchService (lunchContext context){
             _repository = new LunchRepository(context);
         }
-        
-
-
         public Restaurants testClass(){
             return _repository.getRestaurants();
         }

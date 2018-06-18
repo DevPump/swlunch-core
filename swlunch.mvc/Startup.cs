@@ -11,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using swlunch.data;
+using swlunch.service;
 
 namespace swlunch.mvc
 {
@@ -36,6 +37,9 @@ namespace swlunch.mvc
             services.AddDbContext<lunchContext>(options =>
                 options.UseNpgsql(Configuration.GetConnectionString("lunchDatabase")
             ));
+            // One service per service created in service project.
+            // Registering services for dependency injection.
+            services.AddScoped<LunchService, LunchService>();
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);

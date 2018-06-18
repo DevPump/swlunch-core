@@ -268,3 +268,5 @@ __pycache__/
 # tools/
 
 appsettings*.json
+swlunch.mvc/appsettings.json
+swlunch.mvc/appsettings.Development.json
