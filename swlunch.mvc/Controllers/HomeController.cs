@@ -18,7 +18,7 @@ namespace swlunch.mvc.Controllers
         }
         public IActionResult Index()
         {
-            Restaurants variable = _service.testClass();
+            Restaurants variable = _service.getRestaurants();
             return View();
         }
 

@@ -7,12 +7,13 @@ namespace swlunch.service
 {
     public class LunchService
     {
-        private LunchRepository _repository;
+        private lunchContext _context;
+
         public LunchService (lunchContext context){
-            _repository = new LunchRepository(context);
+            _context = context;
         }
-        public Restaurants testClass(){
-            return _repository.getRestaurants();
+        public Restaurants getRestaurants(){
+            return _context.Restaurants.Find(1);
         }
     }
 }
