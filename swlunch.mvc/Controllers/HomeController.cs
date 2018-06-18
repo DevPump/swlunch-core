@@ -4,14 +4,22 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using swlunch.data;
 using swlunch.mvc.Models;
+using swlunch.service;
 
 namespace swlunch.mvc.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly lunchContext _context;
+        public HomeController(lunchContext context){
+            _context = context;
+        }
         public IActionResult Index()
         {
+            LunchService cls = new LunchService(_context);
+            Restaurants variable =  cls.testClass();
             return View();
         }
 

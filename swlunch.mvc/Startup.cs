@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
-
+using swlunch.data;
 
 namespace swlunch.mvc
 {
@@ -34,7 +34,7 @@ namespace swlunch.mvc
             });
 
             services.AddDbContext<lunchContext>(options =>
-                options.UseNpgsql(Configuration.GetConnectionString("lunchContext")
+                options.UseNpgsql(Configuration.GetConnectionString("lunchDatabase")
             ));
 
 

@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
-namespace swlunch.mvc
+namespace swlunch.data
 {
     public partial class lunchContext : DbContext
     {
